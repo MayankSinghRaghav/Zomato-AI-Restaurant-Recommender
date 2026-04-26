@@ -6,7 +6,7 @@ import streamlit as st
 BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1:8080")
 
 st.set_page_config(page_title="Zomato AI FE", page_icon="🍽️", layout="centered")
-st.title("Phase 6 Frontend")
+st.title("Phase 5 Frontend")
 st.caption("Frontend app connected to backend recommendation API.")
 
 location = st.text_input("Location", value="Bellandur")

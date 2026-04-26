@@ -49,7 +49,7 @@ This list is derived from `problemstatement.md` and `phased-architecture.md`.
 - Backend URL/environment not configured in frontend.
 - Frontend assumes LLM mode fields that fallback responses do not include.
 
-## 7) Phase 6 - Full-Stack Runtime
+## 7) Phase 5 - Full-Stack Runtime
 
 - Backend starts but data artifact is missing; endpoint returns 500.
 - Frontend submits valid request but error rendering hides backend message.

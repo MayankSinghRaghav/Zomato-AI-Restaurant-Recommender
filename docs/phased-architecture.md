@@ -85,41 +85,26 @@ Use Groq-hosted LLM models to produce top recommendations with explanations.
 
 ---
 
-## Phase 5: Product Split (Backend + Frontend Architecture)
+## Phase 5: Product Split & Full-Stack Implementation
 
 ### Goal
-Evolve from a single-app flow into proper backend and frontend boundaries.
+Evolve from a single-app flow into proper backend and frontend boundaries and implement the architecture.
 
 ### Scope
 - Backend API (recommendation endpoint, health endpoint)
 - Frontend app consuming backend APIs
 - Shared request/response contracts and validation
 - API-key handling isolated to backend only
-
-### Deliverables
-- Updated architecture with clear FE/BE separation
-- Service contracts ready for implementation
-
----
-
-## Phase 6: Full-Stack Implementation
-
-### Goal
-Implement the phase-5 architecture with working backend and frontend modules.
-
-### Scope
-- Backend server exposing recommendation APIs
-- Frontend web app submitting inputs and rendering top results
 - Integrated execution path from UI to Groq-backed recommendations
 
 ### Deliverables
-- `phase6/backend/` implementation
-- `phase6/frontend/` implementation
+- `phase5/backend/` implementation
+- `phase5/frontend/` implementation
 - End-to-end run instructions
 
 ---
 
-## Architecture Flow (After Phase 6)
+## Architecture Flow (After Phase 5)
 
 1. **Frontend UI** captures user preferences  
 2. **Backend API** validates and orchestrates query execution  
