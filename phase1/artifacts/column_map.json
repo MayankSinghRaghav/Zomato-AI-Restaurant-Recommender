@@ -1,0 +1,8 @@
+{
+  "name": "name",
+  "location": "location",
+  "cuisines": "cuisines",
+  "cost": "approx_cost(for two people)",
+  "rating": "rate",
+  "highlights": "dish_liked"
+}

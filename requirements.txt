@@ -1,0 +1,5 @@
+streamlit
+datasets
+pandas
+requests
+python-dotenv
