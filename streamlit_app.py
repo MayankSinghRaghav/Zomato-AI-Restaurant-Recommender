@@ -43,7 +43,6 @@ def apply_theme() -> None:
         /* Input styling */
         .stTextInput>div>div>input, 
         .stNumberInput>div>div>input,
-        .stSelectbox>div>div>div,
         .stTextArea>div>div>textarea {
             background-color: #f4f6f8;
             border: 1px solid #e0e0e0;
@@ -145,8 +144,7 @@ apply_theme()
 st.markdown(
     """
     <div style="position: fixed; top: 0; left: 0; width: 100%; height: 60px; background-color: white; z-index: 99999; display: flex; align-items: center; justify-content: center; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-        <span style="color: #e23744; font-size: 26px; font-weight: 900; font-family: sans-serif; font-style: italic;">zomato</span>
-        <span style="color: #1c1c1c; font-size: 18px; font-weight: 700; font-family: sans-serif; margin-left: 8px;">Zomato AI Recommendation</span>
+        <span style="color: #e23744; font-size: 26px; font-weight: 900; font-family: sans-serif; font-style: italic;">zomato AI recommender</span>
     </div>
     """,
     unsafe_allow_html=True
@@ -304,10 +302,11 @@ if run_clicked:
             llm_reason = "Gemini unavailable, fallback recommendations shown."
             result = fallback_recommendations(candidates, top_k=5)
 
-        st.markdown(
-            f'<div class="status-chip">ℹ️ {llm_status} - {llm_reason}</div>',
-            unsafe_allow_html=True,
-        )
+        # Hide the LLM info status chip as requested
+        # st.markdown(
+        #     f'<div class="status-chip">ℹ️ {llm_status} - {llm_reason}</div>',
+        #     unsafe_allow_html=True,
+        # )
 
         recommendations = result.get("recommendations", [])
         if not recommendations:
